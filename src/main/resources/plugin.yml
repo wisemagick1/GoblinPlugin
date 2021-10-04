@@ -1,0 +1,24 @@
+name: Goblin
+version: ${project.version}
+main: me.wisemagick1.goblin.Main
+api-version: 1.16
+prefix: Plugin has loaded!
+authors: [ wisemagick1 ]
+description: A plugin for GoblinWizard_DM server
+commands:
+  yeet:
+    description: Yeets Player
+    usage: /yeet <player>
+    permission: Goblin.yeet
+  unyeet:
+    description: Unyeets Player
+    usage: /unyeet <player>
+    permission: Goblin.unyeet
+  Bees:
+    description: Bees?!?!
+    usage: /bees
+    permission: Goblin.bees
+  ggive:
+    description: Gives you a flower!
+    usage: /ggive <player>
+    permissions: Goblin.ggive.others
