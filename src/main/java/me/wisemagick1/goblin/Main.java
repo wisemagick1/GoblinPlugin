@@ -1,15 +1,8 @@
 package me.wisemagick1.goblin;
 
-import org.bukkit.Bukkit;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
+import me.wisemagick1.goblin.commands.Bees;
+import me.wisemagick1.goblin.commands.GoblinGive;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.util.Vector;
-
-
-import java.sql.SQLOutput;
 
 public final class Main extends JavaPlugin {
 

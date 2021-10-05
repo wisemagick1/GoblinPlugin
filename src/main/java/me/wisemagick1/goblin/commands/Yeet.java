@@ -1,5 +1,6 @@
-package me.wisemagick1.goblin;
+package me.wisemagick1.goblin.commands;
 
+import me.wisemagick1.goblin.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -37,6 +38,7 @@ private Main plugin;
                             myPlayer.setGravity(false);
                             myPlayer.setAllowFlight(true);
                             myPlayer.setVelocity(new Vector(0, 1000, 0));
+
                             counter--;
                             if (counter == 0) {
                                 myPlayer.setGravity(true);
@@ -47,6 +49,9 @@ private Main plugin;
 
 
                     }.runTaskTimer(plugin,0,30);
+
+
+
 
                 } else {
                     sender.sendMessage(args[0] + " is not online right now!"); // sends a player a message if args[0] is not a player or if the player is not online

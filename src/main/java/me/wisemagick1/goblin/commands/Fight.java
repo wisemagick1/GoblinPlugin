@@ -1,4 +1,4 @@
- package me.wisemagick1.goblin;
+ package me.wisemagick1.goblin.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

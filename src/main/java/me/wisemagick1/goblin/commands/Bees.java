@@ -1,4 +1,4 @@
-package me.wisemagick1.goblin;
+package me.wisemagick1.goblin.commands;
 
 
 import com.sun.org.apache.xerces.internal.impl.validation.EntityState;
