@@ -10,10 +10,6 @@ commands:
     description: Yeets Player
     usage: /yeet <player>
     permission: Goblin.yeet
-  unyeet:
-    description: Unyeets Player
-    usage: /unyeet <player>
-    permission: Goblin.unyeet
   Bees:
     description: Bees?!?!
     usage: /bees
