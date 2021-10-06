@@ -26,10 +26,10 @@ public class GoblinGive implements CommandExecutor {
                         ItemStack[] items = {new ItemStack(Material.DANDELION, 1), new ItemStack(Material.POPPY, 1), new ItemStack(Material.BLUE_ORCHID, 1), new ItemStack(Material.ALLIUM, 1), new ItemStack(Material.AZURE_BLUET, 1), new ItemStack(Material.RED_TULIP, 1), new ItemStack(Material.WHITE_TULIP, 1), new ItemStack(Material.ORANGE_TULIP, 1), new ItemStack(Material.PINK_TULIP, 1), new ItemStack(Material.OXEYE_DAISY, 1), new ItemStack(Material.CORNFLOWER, 1), new ItemStack(Material.LILY_OF_THE_VALLEY, 1), new ItemStack(Material.WITHER_ROSE, 1)};
                         myPlayer.getInventory().addItem(items[i]);
                         if (sender instanceof Player) {
-                            sender.sendMessage("You have given " + myPlayer.getDisplayName() + " a flower!");
-                            myPlayer.sendMessage("You have been given a flower by " + ((Player) sender).getDisplayName() + "!");
-                        } else if (sender instanceof ConsoleCommandSender)
-                            sender.sendMessage("You have given " + myPlayer.getDisplayName() + " a flower!");
+                            sender.sendMessage("You have given " + myPlayer.toString() + " a flower!");
+                            myPlayer.sendMessage("You have been given a flower by " + ((Player) sender).toString() + "!");
+                        } else if (sender instanceof Player != true)
+                            sender.sendMessage("You have given " + myPlayer.toString() + " a flower!");
                             myPlayer.sendMessage("You have been given a flower!");
                     }else{
                         sender.sendMessage(ChatColor.DARK_RED + "Player is not online!");
