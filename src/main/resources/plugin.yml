@@ -17,4 +17,8 @@ commands:
   ggive:
     description: Gives you a flower!
     usage: /ggive <player>
-    permissions: Goblin.ggive.others
+    permission: Goblin.ggive.others
+  fuckoff:
+    description: Bans a player.
+    usage: /fuckoff <player>
+    permission: Goblin.fuckoff
