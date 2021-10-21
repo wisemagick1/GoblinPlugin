@@ -16,7 +16,7 @@ public class GoblinGive implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (cmd.getName().equalsIgnoreCase("ggive")) {
             if (args.length == 1 && args[0].length() > 2) {
-                const UPPERBOUND = 13;
+                final int UPPERBOUND = 13;
                 if (sender.hasPermission("Goblin.ggive.others") && sender instanceof Player) {
                     if (Bukkit.getServer().getOnlinePlayers().toString().contains(args[0])) { // This checks if args[0] is the name of a player who is online
                         Player myPlayer = Bukkit.getPlayer(args[0]);
