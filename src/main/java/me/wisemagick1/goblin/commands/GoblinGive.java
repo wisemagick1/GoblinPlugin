@@ -16,13 +16,13 @@ public class GoblinGive implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (cmd.getName().equalsIgnoreCase("ggive")) {
             if (args.length == 1 && args[0].length() > 2) {
+                const UPPERBOUND = 13;
                 if (sender.hasPermission("Goblin.ggive.others") && sender instanceof Player) {
                     if (Bukkit.getServer().getOnlinePlayers().toString().contains(args[0])) { // This checks if args[0] is the name of a player who is online
                         Player myPlayer = Bukkit.getPlayer(args[0]);
 
                         Random rand = new Random(); //instance of random class
-                        int upperbound = 13;
-                        int i = rand.nextInt(upperbound);
+                        int i = rand.nextInt(UPPERBOUND);
                         ItemStack[] items = {new ItemStack(Material.DANDELION, 1), new ItemStack(Material.POPPY, 1), new ItemStack(Material.BLUE_ORCHID, 1), new ItemStack(Material.ALLIUM, 1), new ItemStack(Material.AZURE_BLUET, 1), new ItemStack(Material.RED_TULIP, 1), new ItemStack(Material.WHITE_TULIP, 1), new ItemStack(Material.ORANGE_TULIP, 1), new ItemStack(Material.PINK_TULIP, 1), new ItemStack(Material.OXEYE_DAISY, 1), new ItemStack(Material.CORNFLOWER, 1), new ItemStack(Material.LILY_OF_THE_VALLEY, 1), new ItemStack(Material.WITHER_ROSE, 1)};
                         myPlayer.getInventory().addItem(items[i]);
                             sender.sendMessage("You have given " + myPlayer.getDisplayName() + " a flower!");
@@ -41,8 +41,7 @@ public class GoblinGive implements CommandExecutor {
                     if (args.length == 0 && sender instanceof Player && sender.hasPermission("Goblin.ggive")) {
                         Player player = (Player) sender;
                         Random rand = new Random(); //instance of random class
-                        int upperbound = 13;
-                        int i = rand.nextInt(upperbound);
+                        int i = rand.nextInt(UPPERBOUND);
                         ItemStack[] items = {new ItemStack(Material.DANDELION, 1), new ItemStack(Material.POPPY, 1), new ItemStack(Material.BLUE_ORCHID, 1), new ItemStack(Material.ALLIUM, 1), new ItemStack(Material.AZURE_BLUET, 1), new ItemStack(Material.RED_TULIP, 1), new ItemStack(Material.WHITE_TULIP, 1), new ItemStack(Material.ORANGE_TULIP, 1), new ItemStack(Material.PINK_TULIP, 1), new ItemStack(Material.OXEYE_DAISY, 1), new ItemStack(Material.CORNFLOWER, 1), new ItemStack(Material.LILY_OF_THE_VALLEY, 1), new ItemStack(Material.WITHER_ROSE, 1)};
                         player.sendMessage("Have a flower!");
                         player.getInventory().addItem(items[i]);
