@@ -1,9 +1,6 @@
 package me.wisemagick1.goblin;
 
-import me.wisemagick1.goblin.commands.Bees;
-import me.wisemagick1.goblin.commands.Fuckoff;
-import me.wisemagick1.goblin.commands.GoblinGive;
-import me.wisemagick1.goblin.commands.Yeet;
+import me.wisemagick1.goblin.commands.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
@@ -16,6 +13,7 @@ public final class Main extends JavaPlugin {
         this.getCommand("ggive").setExecutor(new GoblinGive());
         this.getCommand("yeet").setExecutor(new Yeet());
         this.getCommand("Fuckoff").setExecutor(new Fuckoff());
+        this.getCommand("Rainbow").setExecutor(new Rainbow());
         Yeet.plugin = this;
 
 
