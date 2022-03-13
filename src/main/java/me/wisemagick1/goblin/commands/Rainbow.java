@@ -31,25 +31,26 @@ public class Rainbow implements CommandExecutor {
                         Player player = (Player) sender;
                         player.sendMessage(ChatColor.DARK_RED + "No permission!");
                     }
-                }} else {
-            if (args.length == 0 && sender instanceof Player && sender.hasPermission("Goblin.rainbow")) {
-                Player player = (Player) sender;
-                ItemStack[] items = {new ItemStack(Material.RED_WOOL, 64), new ItemStack(Material.ORANGE_WOOL, 64), new ItemStack(Material.YELLOW_WOOL, 64), new ItemStack(Material.GREEN_WOOL, 64), new ItemStack(Material.BLUE_WOOL, 64), new ItemStack(Material.PURPLE_WOOL, 64), new ItemStack(Material.MAGENTA_WOOL, 64)};
-                player.sendMessage("Have a rainbow!");
-                player.getInventory().addItem(items);
-            } else {
-                if (args.length == 0 && sender instanceof Player && !sender.hasPermission("Goblin.rainbow")) {
+                }
+            else {
+                if (args.length == 0 && sender instanceof Player && sender.hasPermission("Goblin.rainbow")) {
                     Player player = (Player) sender;
-                    player.sendMessage(ChatColor.DARK_RED + "No permission!");
-                } else if (args.length == 0 && sender instanceof ConsoleCommandSender) {
-                    sender.sendMessage("Invalid command args! Usage: /rainbow <player>");
+                    ItemStack[] items = {new ItemStack(Material.RED_WOOL, 64), new ItemStack(Material.ORANGE_WOOL, 64), new ItemStack(Material.YELLOW_WOOL, 64), new ItemStack(Material.GREEN_WOOL, 64), new ItemStack(Material.BLUE_WOOL, 64), new ItemStack(Material.PURPLE_WOOL, 64), new ItemStack(Material.MAGENTA_WOOL, 64)};
+                    player.sendMessage("Have a rainbow!");
+                    player.getInventory().addItem(items);
+                } else {
+                    if (args.length == 0 && sender instanceof Player && !sender.hasPermission("Goblin.rainbow")) {
+                        Player player = (Player) sender;
+                        player.sendMessage(ChatColor.DARK_RED + "No permission!");
+                    } else if (args.length == 0 && sender instanceof ConsoleCommandSender) {
+                        sender.sendMessage("Invalid command args! Usage: /rainbow <player>");
+                    }
                 }
             }
         }
         return true;
     }
 }
-
 
 
 
