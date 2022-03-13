@@ -18,6 +18,10 @@ commands:
     description: Gives you a flower!
     usage: /ggive <player>
     permission: Goblin.ggive.others
+  Rainbow:
+    description: Gives you a flower!
+    usage: /ggive <player>
+    permission: Goblin.rainbow.others
   fuckoff:
     description: Bans a player.
     usage: /fuckoff <player>
